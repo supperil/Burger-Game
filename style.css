@@ -1,0 +1,420 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+
+#schermata_inizio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(risorse/sfondo.png);
+    background-size: contain;
+}
+
+#cambio_schermata {
+    padding: 15px 30px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 2px solid gold;
+    background-color: royalblue;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 10px;
+}
+
+#bho {
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    height: 400px;
+    border: 2px solid black;
+    border-radius: 20px; 
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(10px);
+}
+
+#informazioni {
+    padding: 15px 30px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 2px solid gold;
+    background-color: royalblue;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 10px;
+}
+
+#cambio_schermata:hover {
+    background-color: gold;
+    color: royalblue;
+    transform: scale(1.1);
+}
+
+#informazioni:hover {
+    background-color: gold;
+    color: royalblue;
+    transform: scale(1.1);
+}
+
+
+#maker, #burger{
+    position: relative;
+    z-index: 6;
+}
+
+#banner{
+    width: 40%;
+    margin-top: -20%;
+    margin-bottom: -15%;
+    z-index: 3;
+}
+
+#cucina{
+    margin: 0 auto; 
+    text-align: center; 
+    display: none;
+    background-image: url(risorse/mattonato2.png);
+}
+
+#top{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 25vh;
+    justify-content: space-between; /* Distribuisce gli elementi all'interno del top */
+    align-items: flex-start; /* Allinea gli elementi all'inizio del top */
+    z-index: 2;
+    
+}
+
+#mensola{
+    background-image: url(risorse/mensola.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y:110px; 
+}
+
+#ketchup:hover img{
+    content: url('risorse/ketchupS.jpg');
+    transition: 0.5s;
+    width: 150px;
+}
+#maionese:hover img{
+    content: url('risorse/maioneseS.jpg');
+    width: 150px;
+    transition: 0.5s;
+}
+#sburger:hover img{
+    content: url('risorse/sBurgherS.jpg');
+    width: 150px;
+    transition: 0.5s;
+}
+
+.salse{
+    display: flex;
+    z-index: 2;
+}
+
+.salse img {
+    cursor: pointer;
+    width: 135px;
+    height: auto; 
+}
+
+#top_center{
+    animation: rainbow 10s infinite;
+    background: white;
+    border: 3px solid;
+    border-radius: 20px;
+    width: 400px;
+}
+
+@keyframes rainbow {
+    0% {border-color: red; }
+    14% {border-color: orange; }
+    28% {border-color: yellow; }
+    42% {border-color: green; }
+    56% {border-color: blue; }
+    70% {border-color: indigo; }
+    84% {border-color: violet; }
+    100% {border-color: red; }
+}
+#top_center img{
+    width: 15%;
+    cursor: pointer;
+}
+
+#top_center img:hover{
+    width: 17%;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+#center{
+    height: 45vh;
+    z-index: 0;
+    position: relative;
+    display: flex;
+}
+
+#clienti{
+    display: flex;
+    position: absolute;
+    bottom: -17px;
+    align-items: flex-start;
+    margin-left: -50px;
+    z-index: 0;
+}
+
+#cliente1 , #cliente2, #cliente3,#cliente4,#scibetta{
+    height: 45vh;
+    z-index: 0;
+}
+
+#cliente2, #cliente3,#cliente4,#scibetta{
+    display: none;
+}
+
+#nuvoletta img{
+    height: 47vh;
+    width: 90vh;
+    margin-top: 1vh;
+    z-index: 0;
+}
+
+#nuvoletta div{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#nuvoletta {
+    bottom:20px;
+    margin-left: 20vh;
+    height: 50vh;
+    width: 90vh;
+    z-index: 1;
+    position: relative;
+}
+
+#elementi{
+    z-index: 2;
+    position: absolute;
+    top: 10px;
+    left: 20vh;
+    display: flex;
+    flex-direction:row;
+    height: 45vh;
+}
+
+#dialogo{
+    margin-top:5%;
+    width: 50%;
+    margin-left: -20px;
+}
+
+#ordine {
+    width: 40%;
+    height: 20vh;
+    margin-top: -20px;
+    padding-left: 50px;
+}
+
+#ordine img{
+    width: auto;
+    height: 15vh;
+    margin-bottom:-80px;
+}
+
+#panino{
+    margin-top:10%;
+    display: flex;
+    flex-direction: column;
+    margin-left: -10px;
+}
+
+#panino img{
+    width: auto;
+    max-height: 100px;
+}
+
+#vassoio {
+    margin-top: 2vh;
+    margin-left: -4vh;
+    height: 45vh;
+    width: 100%;
+    background-image: url('risorse/vassoio2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}
+
+#precario{
+    margin-top: -10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+#precario img{
+    margin-bottom: -100px;
+    height: 120px;
+    width: 30%;
+
+}
+
+
+#bottom {
+    height: 30vh;
+    background-image: url(risorse/bancone.png);
+    background-size: cover; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+}
+#riprova{
+    display: none;
+}
+
+#prosegui{
+    display: none;
+}
+
+
+.bancone{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.scaffale {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center; 
+}
+
+.scatole{
+    display:flex;
+    position: relative;
+    align-items: center;
+    margin-right: 40px;
+    margin: 0 5px;
+}
+
+.scatole img{
+    width:200px;
+    height: auto;
+}
+
+.scatole:hover .condimento{
+    width: 220px;
+    transition: 0.5s;
+}
+
+.condimento {
+    width: 10px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+#bottoni {
+    padding: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+#bottoni button{
+    width: 150px;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 10vh;
+    font-size: 20px;
+}
+#consegna{
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 30px;
+}
+
+#consegna:hover{
+    background-color: #378339;
+    border:solid black 2px ;
+    width: 105%;
+    transition: 0.7s;
+    border-radius: 0px;
+    cursor: pointer;
+}
+
+#riprova{
+    background-color: #fdd835;
+    color:black;
+    border: none;
+    border-radius: 30px;
+}
+
+#riprova:hover{
+    cursor: pointer;
+    background-color: #c4a82b;
+    border:solid black 2px ;
+    width: 150%;
+    transition: 0.7s;
+    border-radius: 0px;
+}
+
+#elimina{
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 30px;
+}
+
+#elimina:hover{
+    background-color: #b3332a;
+    color: white;
+    border:solid black 2px ;
+    width: 105%;
+    transition: 0.7s;
+    border-radius: 0px;
+    cursor: pointer;
+}
+
+#prosegui{
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 30px;
+}
+
+#prosegui:hover{
+    border-radius: 0px;
+    background-color: #006081;
+    color: white;
+    border:solid black 2px ;
+    width: 150%;
+    transition: 0.7s;
+    cursor: pointer;
+}
+
+#bho {
+    width: 90%;
+    max-width: 550px;
+    margin: 0 auto;
+}
+

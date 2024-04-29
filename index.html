@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js"></script>
+    <script type="module" src="https://pyscript.net/releases/2024.1.3/core.js"></script>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.3/core.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="icon" href="risorse/fav.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+
+<body>
+    <audio id="squeese" src="risorse/squeese.mp3"></audio>
+    <audio id="placing" src="risorse/placing_food.mp3" ></audio>
+    <audio id="remove" src="risorse/levare.mp3" ></audio>
+    <audio id="backsound" src="risorse/backsound2.mp3" loop></audio>
+    <div id="schermata_inizio">
+        <div id="bho">
+            <div id="logo">
+                <a id="burger"><img src="https://fontmeme.com/permalink/240228/09fe02286dbde15733d39258815b93fc.png" alt="effetto-ombra"></a>
+                <img id="banner" src="risorse/banner.png" alt="burger">
+                <br>
+                <a id="maker" ><img src="https://fontmeme.com/permalink/240228/3fc00f3f467fdc3e90625086746c48c2.png" alt="effetto-ombra"></a>
+            </div>
+            <div>
+                <button id="cambio_schermata">Gioca!</button>
+                <button id="informazioni" onclick="info()">INFO</button>
+            </div>
+        </div>
+    </div>
+    <main id="cucina">
+        <div id="top">
+            <div class="salse" id="mensola">
+                <div id="ketchup">
+                    <img src="risorse/ketchup.jpg" alt="ketchup" title="Ketchup-clicca per inserire">
+                </div>
+                <div id="maionese">
+                    <img src="risorse/maionese.jpg" alt="maionese" title="Maionese-clicca per inserire">
+                </div>
+                <div id="sburger">
+                    <img src="risorse/salsaBurgher.jpg" alt="salsaBurgher" title="S.Burgher-clicca per inserire">
+                </div>
+            </div>
+            <div id="top_center">
+                <div id="punteggio_tabellone">
+                    <h1 id="punteggio"> Punteggio=</h1>
+                </div>
+                <img id="home" src="risorse/home.png" alt="casa" title="torna alla scherma di inizio">
+            </div>
+            <div class="scaffale">
+                <div id="scatola6" class="scatole">
+                    <img src="risorse/cassetta.png">
+                    <img id="insalata" class="condimento" src="risorse/insalata_scatola.png" alt="Insalata" title="Insalata-clicca per inserire">
+                </div>
+                <div id="scatola7" class="scatole">
+                    <img src="risorse/cassetta.png">
+                    <img id="pomodoro" class="condimento" src="risorse/pomodoroS.png" alt="Pomodoro" title="Pomodoro-clicca per inserire">
+                </div>
+                <div id="scatola8" class="scatole">
+                    <img src="risorse/cassetta.png">
+                    <img id="avocado" class="condimento" src="risorse/avocado.png" alt="Avocado" title="Avocado-clicca per inserire">
+                </div>
+            </div>
+        </div>
+        <div id="center">
+            <div id="clienti" title="presto! servi i tuoi clienti">
+                <img id="cliente1" src="risorse/persona1.png" alt="persona1">
+                <img id="cliente2" src="risorse/persona2.png" alt="persona2">
+                <img id="cliente3" src="risorse/persona3.png" alt="persona3">
+                <img id="cliente4" src="risorse/persona4.png" alt="persona4">
+                <img id="scibetta" src="risorse/persona5.png" alt="persona5">
+            </div>
+            <div id="nuvoletta">
+                <img src="risorse/nuvoletta.jpg" alt="cornice">
+                <div id="elementi">
+                    <div id="dialogo">
+                        <h1 id="frase"></h1>
+                        <h1 id="problemi"></h1>
+                    </div>
+                    <div id="ordine"></div>
+                </div>
+            </div>
+            <div id="vassoio">
+                <div id="precario"></div>
+            </div>
+        </div>
+        <div id="bottom">
+            <div class="bancone">
+                <div id="scatola1" class="scatole">
+                    <img src="risorse/cassetta.png">
+                    <img id="paninoSu" class="condimento" src="risorse/culoSu.png" alt="panino parte sopra" title="Panino parte sopra-clicca per inserire">
+                </div>
+                <div id="scatola2" class="scatole">
+                    <img  src="risorse/cassetta.png">
+                    <img id="paninoGiu" class="condimento" src="risorse/culoGiu.png" alt="panino parte sopra" title="Panino parte sotto-clicca per inserire">
+                </div>
+                <div id="scatola3" class="scatole">
+                    <img src="risorse/cassetta.png">
+                    <img id="carne" class="condimento" src="risorse/carne.png" alt="carne bovina" title="hamburger-clicca per inserire">
+                </div>
+                <div id="scatola4" class="scatole">
+                    <img src="risorse/cassetta.png">
+                    <img id="pollo" class="condimento" src="risorse/polloS.png" alt="carne di pollo" title="pollo-clicca per inserire">
+                </div>
+                <div id="scatola5" class="scatole">
+                    <img src="risorse/cassetta.png">
+                    <img id="bacon" class="condimento" src="risorse/baconS.png" alt="bacon" title="bacon-clicca per inserire">
+                </div>
+            </div>
+            <div id="bottoni">
+                <button id="elimina" onclick="">Elimina</button>
+                <button id="consegna">Consegna</button>
+                <button id="riprova">Riprova</button>
+                <button id="prosegui">Prosegui!</button>
+            </div>
+        </div>
+    </main>
+    <script type="py" src="index.py" config="./pyscript.json"></script>
+</body>
+
+</html>
